@@ -1,0 +1,383 @@
+.grid-container {
+  width: 80%;
+  height: 45%;
+  display: grid;
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 10px;
+}
+
+#writeupContainer {
+  width: 80%;
+  height: 45%;
+  display: grid;
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+  padding: 10px;
+}
+
+.menuImg {
+  margin-top: 5%;
+  max-height: 50%;
+  max-width: 100%;
+}
+
+.writeupDiv {
+  color: #2A2A2A;
+  font-size: 15px;
+  text-align: left; 
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(216, 216, 216);
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  border-style: outset;
+  padding: 20px;
+  box-shadow: 7px 7px;
+  height: auto;
+}
+
+#sushiDiv, #mazeDiv, #shootingDiv {
+  cursor: pointer;
+}
+
+.grid-item {
+  background-color: rgb(216, 216, 216);
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  border-style: outset;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 7px 7px;
+  min-height: 200px;
+}
+
+.grid-item:hover {
+    border: 2px solid #FF00F0;
+    border-style: inset;
+    /* background-color: #FF00F0; */
+    transition: 0.3s linear;
+}
+
+
+/* ===== MAZE ===== */
+#mazeBody {
+  background-color: black;
+}
+
+#mazeQuit {
+  color: white;
+  margin: 30px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#mazeQuit:hover {
+  color: #64dcdc;
+  margin: 30px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.mazeP {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 32px;
+  font-size: 14px;
+  color: #ff00c1;
+  text-align:center;
+}
+
+#maze {
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block;
+}
+
+svg {
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block;
+}
+
+/* The Modal (background) */
+.mazeModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.maze-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #444444;
+}
+
+/* Close button */
+.mazeClose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* ===== SPACE WARS ===== */
+#killCount {
+  font-family: 'Press Start 2P', cursive;
+}
+
+#spaceBody a {
+  font-family: 'Press Start 2P', cursive;
+  margin-left: 15px; 
+  margin-right: 5px;
+  color: black;
+}
+
+#spaceBody a:hover {
+  color: white;
+}
+
+#nameText {
+  font-family: 'Press Start 2P', cursive;
+  margin-left: 15px; 
+  height: 25px;
+}
+
+#restartBtn, #saveBtn, #scoresBtn {
+  font-family: 'Press Start 2P', cursive;
+  padding: 15px 25px;
+  margin-top: -8px;
+  margin-left: 20px;
+}
+
+.container {
+  font-family: Helvetica, Arial, sans-serif;
+  height:98%;
+  width:98%;
+}
+
+.container > * {
+  background-color: #ccc;
+  padding: 1em;
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0; 
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    height: 43em;
+    display: grid;
+    grid-template-columns: 14% 70% 14%;
+    grid-gap: 2% 2%;
+    grid-template-rows: 10% auto 20%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 3;
+
+  }
+  .sidebar {
+    grid-row-end: span 2;
+  }
+  .content {
+    grid-column: 2;
+  }
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* ===== MENU ===== */
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  list-style-type: none;
+}
+
+ul li {
+  padding: 0px 20px;
+}
+
+ul li a {
+  /* --fill-color: #5719e6; */
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  /* font: 700 3rem Raleway, sans-serif; */
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--fill-color);
+  background: linear-gradient(var(--fill-color) 0 100%) left/0 no-repeat;
+  color: transparent;
+  background-clip: text;
+  transition: 0.3s linear;
+}
+
+ul li a:hover {
+  background-size: 100%;
+}
+
+
+/* ===== SUSHI GAME ===== */
+#sushiBody {
+  background-color: #917c68;
+  font-family: 'DotGothic16', sans-serif;
+  overflow: hidden;
+  /* background-image: url(../resources/gingham.jpg);; */
+}
+
+#sushiBody a {
+  color: white;
+}
+
+.starter {
+  position: absolute;
+}
+
+.ingredient {
+  position: absolute;
+  cursor: move;
+  z-index: 10;
+}
+
+#sushi {
+  position: fixed;
+  margin-top: 45px;
+  margin-left: 50px;
+  height: 70%;
+  width: 700px;
+  /* background-color: white; */
+}
+
+#tray {
+  margin-left: 850px;
+  height: 100%;
+  width: 300px;
+}
+
+#crab, #crab2 {
+  height: 55px; 
+  margin-top: 30px;
+}
+
+#salmon, #salmon2 {
+  height: 90px; 
+  margin-top: 100px;
+}
+
+#tamago, #tamago2 {
+  height: 45px; 
+  margin-top: 210px;
+}
+
+#avocado, #avocado2 {
+  height: 90px; 
+  margin-top: 280px;
+}
+
+#cucumber, #cucumber2 {
+  height: 40px; 
+  margin-top: 390px;
+}
+
+#riceBowl, #riceBowl2, #riceBowl3, #riceBowl4, #riceBowl5 {
+  height: 110px; 
+  margin-top: 450px; 
+  margin-left: 20px;
+}  
+
+/* =============================================================================
+   PARTICLE BACKGROUND - HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+   /* ---- particles.js container ---- */
+   
+#particles-js canvas {
+    display: block;
+    /* vertical-align: bottom; */
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+   

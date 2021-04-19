@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>  <!-- head -->
+      <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arcade | アーケード</title>
+      <!-- CSS --> 
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/arcade.css">
+    </head>
+
+    <header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://nm2207.org/2021II/A0220971J/web/">NM2207</a></li>
+        <li><a href="writeup.html">Write-up</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </header>
+
+    <body> <!-- body -->
+      <div id="particles-js"></div>
+        <main class="center">
+          <h1>
+            <span class="glitch" data-text="arcade">
+              アーケード
+            </span>
+          </h1>
+        </main>
+
+        <div class="grid-container">
+          <!-- Let's Make Sushi (drag & drop) -->
+          <div id="sushiDiv" class="grid-item" onclick="openSushi()">
+            <a href="sushi.html">SUSHI MAMA</a>
+            <p style="font-size: 14px">With animations & raster graphics!</p>
+            <img class="menuImg" src="resources/sushiGame.png">
+          </div>
+
+          <!-- Maze -->
+          <div id="mazeDiv" class="grid-item" onclick="openMaze()">
+            <a href="maze.html">A-MAZE-ING</a>
+            <p style="font-size: 14px">Go through the maze with the keyboard.</p>
+            <img class="menuImg" src="resources/mazeGame.png">
+          </div>
+          
+          <!-- Shooting -->
+          <div id="shootingDiv" class="grid-item" onclick="openShooting()">
+            <a href="spacewars.html">SPACE WARS</a>
+            <p style="font-size: 14px">Shooting game with a highscore database.</p>
+            <img class="menuImg" src="resources/shootingGame.png">
+          </div>  
+        </div>
+
+        <script src="jslibs/particles.js"></script>
+        <script src="jslibs/stats-app.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        <script type="text/javascript">
+          function openSushi() {
+            console.log("sushi clicked");
+            window.open("sushi.html","_self");
+          };
+
+          function openMaze() {
+            console.log("maze clicked");
+            window.open("maze.html","_self");
+          };
+
+          function openShooting() {
+            console.log("shooting clicked");
+            window.open("spacewars.html","_self");
+          };
+        </script>
+    </body>
+
+
+    <footer>
+        
+    </footer>
+
+</html>
+

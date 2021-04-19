@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>  <!-- head -->
+      <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>A-maze-ing | Arcade | アーケード</title>
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+          <!-- CSS --> 
+          <link rel="stylesheet" type="text/css" href="css/style.css">
+          <link rel="stylesheet" type="text/css" href="css/welcome.css">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+          <script type="text/javascript" src="jslibs/raphael.min.js"></script>
+    </head>
+
+    <body id="mazeBody"> <!-- body -->
+        <br>
+        
+        <a href="index.html" id="mazeQuit" >Quit</a>
+
+        <div id="wrapper">
+            <h1 class="glitch" data-text="A-MAZE-ING">A-MAZE-ING</h1>
+            <span class="sub">a maze that changes every time</span>
+        </div>
+
+        <div class = "box">
+            <p class="mazeP">Press arrow keys to move</p>
+
+            <svg width="500" height="500" viewBox="0 0 450 450" id="maze"></svg>
+        </div>
+
+        <!-- The Modal -->
+        <div id="mazeModal" class="mazeModal">
+            <div class="maze-modal-content">
+                <span class="mazeClose">&times;</span>
+                <p>You did it!</p>
+                <p>Click out to play a new maze.</p>
+            </div>
+        </div>
+
+        <script src="js/maze.js"></script>
+    </body>
+
+    <footer>
+        
+    </footer>
+
+</html>
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>  <!-- head -->
+      <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Space Wars | Arcade | アーケード</title>
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+          <!-- CSS --> 
+          <link rel="stylesheet" type="text/css" href="css/style.css">
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+          <script type="text/javascript" src="jslibs/raphael.min.js"></script>
+
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+          <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    </head>
+
+    <body id="spaceBody"> <!-- body -->
+
+        <div class="container">
+          <header class="header">
+            <a href="index.html">Quit</a>
+            <button id="restartBtn" onclick="window.location.reload();">Restart</button>
+            <button id="scoresBtn">Highscores</button>
+            <input id="nameText" placeholder="Enter name" style="visibility:hidden"/>
+            <button id="saveBtn" onclick="saveScore()" style="visibility:hidden">Save score</button>
+          </header>
+
+          <nav class="sidebar">
+          </nav>
+
+          <!-- The Modal -->
+          <div id="scoresModal" class="modal">
+
+            <!-- Scores from database -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Highscores</p>
+              <p id="highscores"></p>
+            </div>
+
+          </div>
+
+          <article class="content" id="centerDiv">
+            <div id="spaceGame" style="height: 100%"></div>
+          </article>
+
+          <aside class="sidebar">
+          </aside>
+
+          <footer class="footer" id="myFooter">
+            <p id="killCount"></p>
+          </footer>
+
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/spacewars.js"></script>
+        <script>
+          var modal = document.getElementById("scoresModal");
+          var btn = document.getElementById("scoresBtn");
+          var span = document.getElementsByClassName("close")[0];
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+    </body>
+
+
+    <footer>
+        
+    </footer>
+
+</html>
+

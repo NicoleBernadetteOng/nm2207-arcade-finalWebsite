@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>  <!-- head -->
+      <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Sushi | Arcade | アーケード</title>
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+          <!-- CSS --> 
+          <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body id="sushiBody"> <!-- body -->
+        <a href="index.html" style="margin-top: 20px; margin-left: 10px;">Quit</a>
+        <div id="sushiGame" style="margin-top: 20px;">
+
+            <img class="starter" id="bambooMat" src="resources/bambooMat.png" alt="bambooMat" style="height: 600px; width: 800px; z-index: -10;">
+            <img class="starter" id="rollMat" src="resources/bambooMat.png" alt="bambooMat">
+            <img class="starter" id="seaweed" src="resources/seaweed.png" alt="seaweed" style="height: 560px; width: 750px; margin-left: 25px; margin-top: 20px; z-index: -9;">
+            <div id="sushi" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+
+            <img id="doneSushi" src="resources/doneSushi.png" alt="doneSushi" style="height: 400px; position: absolute; display: none; opacity: 0; float: left; z-index: -8;">
+
+            <div id="tray">
+                <img class="ingredient" id="crab" src="resources/crab.png" alt="crab" ondragstart="onDragStart(event)" draggable="true"> 
+                <img class="ingredient" id="crab2" src="resources/crab.png" alt="crab" ondragstart="onDragStart(event)" draggable="true">   
+                <img class="ingredient" id="salmon" src="resources/salmon.png" alt="salmon" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="salmon2" src="resources/salmon.png" alt="salmon" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="tamago" src="resources/tamago.png" alt="tamago" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="tamago2" src="resources/tamago.png" alt="tamago" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="avocado" src="resources/avocado.png" alt="avocado" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="avocado2" src="resources/avocado.png" alt="avocado" ondragstart="onDragStart(event)" draggable="true">  
+                <img class="ingredient" id="cucumber" src="resources/cucumber.png" alt="cucumber" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="cucumber2" src="resources/cucumber.png" alt="cucumber" ondragstart="onDragStart(event)" draggable="true"> 
+                <img class="ingredient" id="riceBowl" src="resources/rice.png" alt="rice" ondragstart="onDragStart(event)" draggable="true">
+                <img class="ingredient" id="riceBowl2" src="resources/rice.png" alt="rice" ondragstart="onDragStart(event)" draggable="true">   
+                <img class="ingredient" id="riceBowl3" src="resources/rice.png" alt="rice" ondragstart="onDragStart(event)" draggable="true"> 
+                <img class="ingredient" id="riceBowl4" src="resources/rice.png" alt="rice" ondragstart="onDragStart(event)" draggable="true"> 
+                <img class="ingredient" id="riceBowl5" src="resources/rice.png" alt="rice" ondragstart="onDragStart(event)" draggable="true"> 
+            </div>
+
+            <div id="textSpace" style="margin-left:1140px;color:white;font-size:20px;width: max-content;">
+                <p>LET'S MAKE SUSHI すし</p>
+            </div>
+
+            <p id="instructions" style="bottom: 300px; margin-left:1120px; position:fixed; color: white;width:250px">
+                いらっしゃいませ！ You get to make your very own sushi~ Start by dragging as many ingredients as you want to the seaweed on the left.
+            </p>
+            <img class="starter" src="resources/chef.png" alt="chef" style="height: 300px;margin-left: 1130px; position:fixed; bottom:0px;">
+        </div>
+
+        <script src="js/sushi.js"></script>
+    </body>
+
+
+    <footer>
+        
+    </footer>
+
+</html>
+

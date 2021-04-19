@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>  <!-- head -->
+      <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arcade | アーケード</title>
+      <!-- CSS --> 
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/arcade.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://nm2207.org/2021II/A0220971J/web/">NM2207</a></li>
+        <li><a href="writeup.html">Write-up</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+    </header>
+
+    <body> <!-- body -->
+      <div id="particles-js"></div>
+        <main class="center">
+          <h1>
+            <span class="glitch" data-text="arcade">
+              アーケード
+            </span>
+          </h1>
+        </main>
+
+        <div id="writeupContainer">
+        	<div class="writeupDiv">
+        		<h2>WRITE-UP OVERVIEW</h2>
+				I designed an arcade website because it allowed me to make a scalable website where I could add different games to demonstrate things that I learned in the module and beyond. Things I learned in NM2207 include: Raphael svg graphics, timer animations, sounds, and event handling. Things I explored outside of the module include: implementing a database, using and animating raster (png) images, and using keyboard events. 
+
+				<br><br>
+				NM2207 was a rollercoaster ride to say the least. Despite having some experience in programming, I still found this model challenging and mentally stimulating. The first few weeks were honestly rather manageable - my TA Daniel would know since I was able to complete the tasks pretty quickly. But as the weeks went by, things got interesting and I had to spend a lot more time trying out new things. Through studying and exploring, I learned a lot and had a lot of fun experimenting with different web technologies. 
+				<br><br>
+			</div>
+
+			<div class="writeupDiv">
+				<h2>HOME PAGE</h2>
+				Early on, I knew that I wanted to explore creating a visually appealing user interface. I wanted to create a tech-y feeling so I chose the "Press Start 2P" font with a dark background and glitch effect. I managed to do the glitch effect by using <a href="https://codepen.io/cbp/pen/RaEOaj/" style="color: #ff00c1; text-decoration: underline;">this</a>. However, the code wasn't working and I discovered that it's because the codes were in scss. I learned how to convert it to pure css through sass on the terminal. I also made use of a <a href="https://vincentgarreau.com/particles.js/"  style="color: #ff00c1; text-decoration: underline;">particles JavaScript library</a> to create the cool animated background. 
+				<br><br>
+				On this page, most of the challenges here came in the form of CSS. Things like adjusting the heights and widths of elements and ensuring that the image doesn't overflow from the div. 
+				<br><br>
+			</div>
+
+
+			<div class="writeupDiv">
+				<h2>SUSHI GAME</h2>
+				While the course taught a lot about SVG graphics and Raphael technologies, I wanted to explore creating a game from png images that I can draw myself. That lead me to create a kind of "Cooking Mama" sushi-making game with different animations and event handlers. 
+
+				<br><br>
+				I spent most of recess week figuring out how to use png images in my sushi-making game. I explored how I could animate images and manipulate elements to create the desired effect in the game such as the rolling sushi animation. 
+
+				<br><br>
+				This page is not responsive as the png imges are fixed in their position. I tried to use percentages to allow the image to move as the window size changes but that disrupted the game objects so I decided to use fixed positions on the original full screen window size. 
+
+				<br><br>
+				The computational thinking process wasn't very elaborate but the main challenges were the animations and drag & drop events for the game objects. Once I figured out how to apply the same programming logic from SVGs to Raster graphics, the game became a lot easier to create. 
+				<br><br>
+          	</div>
+
+			<div class="writeupDiv">
+				<h2>MAZE GAME</h2>
+				This is a maze game that can be played through pressing the arrow keys on the keyboard. This was just an experimental part of my project for me to learn more computational logic and add more games to my website.
+
+				<br><br>
+				I did the glitching title using <a href="https://codepen.io/cipherbeta/pen/YLdVjw" style="color: #ff00c1; text-decoration: underline;">this</a> link and converted the scss to css using the same method as mentioned previously. The design is rather simple - there's just a maze made up of SVG graphics at the center of the page. 
+
+				<br><br>
+				The maze algorithm taken from here: <a href="https://github.com/dstromberg2/maze-generator" style="color: #ff00c1; text-decoration: underline;">https://github.com/dstromberg2/maze-generator</a>
+				As such, not all the code is mine but I believe this project allowed me to demonstrate how I am able to rip and mash from open source resources. I also spent the last week trying to understand as much of the codes as possible. I have added comments extensively in the maze.js file to describe what the functions do. I also made sure to use the Raphael SVG graphics that was taught in NM2207. There was also the use of nested loops as well as two and three dimensional arrays which was very challenging and new to me. 
+				<br><br>
+			</div>
+
+
+			<div class="writeupDiv">
+				<h2>SHOOTING GAME</h2>
+				This game was the one that allowed me to demonstrate the most of what I learned from the module. I made use of the grid layout, arrays and loops, SVG graphics, JavaScript timer animations, and user interaction. On top of that, I was also able to connect a Firebase database for users to save their highscores. 
+
+				<br><br>
+				I wanted to stay true to a retro arcade game so the design was rather simple. I also wanted to spend more time on the computational thinking so I didn't get to spend a lot of time on the aesthetics for this game. I stuck to the grid layout with the SVG canvas in the center. I also used SVG circles to represent the shooter, bullets, and enemies. 
+
+				<br><br>
+				While the concept is rather simple and similar to what was done in class (collision tutorial, shooter tutorial, etc.), the differences and challenges became apparent once I started actually coding the game. I found it difficult to create new red circles that travelled at different speeds towards the bottom of the canvas. I also found it hard to make sure every collision of the bullet to the red circle was being tracked. 
+
+				<br><br>
+				While the tutorials and homework have only explored the use of one interval timer, I ended up using two interval timers in this game: one for handling the animatitons like moving of the shooter and the other to keep generating red circles to be shot. With the new ships being generated and added into an array in one of the interval timers, the other interval timer is looping through the array and taking into account when the bullet collides with the red circle in the array as it is travelling towards the shooter. 
+
+				<br><br>
+				I also used the code in the collision tutorial for the explosion when a red circle bumps into the shooter (green circle). I did this by creating a function called explode with a while loop that pushes disks (circles) with random rates into an array to be "exploded" when the function is called. 
+
+				<br><br>
+				The game ends when the red circle collides with the green shooter circle. When this happens, the explode function is run and little small circle particles are shown flying away from the point where the collision happened. When the game ends, the user is also allowed to enter their name and save their score in a database. I connected the database by looking at tutorials and the Google Firebase documentation. If the user doesn't fill in their name in the input field, an alert is shown to inform the user to key in their name. 
+
+				<br><br>
+				Regrettably, I couldn't fix the bullet issue where the bullet still follows the x position of the mouse, but I spent time improving other aspects of the website such as the user interface, game effects (explosion, sounds from <a href="https://mixkit.co/" style="color: #ff00c1; text-decoration: underline;">https://mixkit.co/</a>, etc.), and implementing the Firebase database. If I was given more time, I think I would've been able to explore solutions to this problem.
+				<br><br>
+			</div>
+
+        </div>
+
+        <script src="jslibs/particles.js"></script>
+        <script src="jslibs/stats-app.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+    </body>
+
+
+    <footer>
+        
+    </footer>
+
+</html>
+
